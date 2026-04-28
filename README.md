@@ -54,3 +54,10 @@ Si vous souhaitez exécuter le projet à partir des sources :
 * `fenetre_graphique.py` : Gestion du dialogue d'affichage et d'export du graphique.
 * `moteur_graphique.py` : Composant d'intégration Matplotlib dans l'interface Qt.
 * `resources_rc.py` : Ressources compilées (logo de l'entreprise).
+
+---
+<p align="center">
+  <img src="LOGO-DEEP-CONCEPT%20fc.png" alt="Logo DEEP Concept" width="200"/>
+  <br>
+  <i>Cette application a été développée au cours d'un stage au sein de l'entreprise <b>DEEP Concept</b>.</i>
+</p>
