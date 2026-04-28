@@ -4,7 +4,7 @@
 
 ---
 
-## ✨ Fonctionnalités
+## Fonctionnalités
 
 * **Gestion multi-fichiers** : Importez plusieurs fichiers `.csv` simultanément pour superposer et comparer vos courbes sur un seul graphique.
 * **Configuration dynamique des axes** :
@@ -15,7 +15,7 @@
 
 ---
 
-## 🚀 Installation & Utilisation
+## Installation & Utilisation
 
 ### Pour les utilisateurs (Windows)
 1.  Allez dans l'onglet **Releases** de ce dépôt.
@@ -38,7 +38,7 @@ Si vous souhaitez exécuter le projet à partir des sources :
 
 ---
 
-## 🛠️ Technologies utilisées
+## Technologies utilisées
 
 * **PySide6 (Qt pour Python)** : Interface utilisateur et gestion des fenêtres.
 * **Pandas** : Analyse et traitement des données CSV.
@@ -47,7 +47,7 @@ Si vous souhaitez exécuter le projet à partir des sources :
 
 ---
 
-## 📂 Structure du projet
+## Structure du projet
 
 * `main.py` : Point d'entrée de l'application.
 * `fenetre_accueil.py` : Logique de la fenêtre principale et gestion des fichiers.
