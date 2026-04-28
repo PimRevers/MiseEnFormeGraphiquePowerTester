@@ -59,5 +59,5 @@ Si vous souhaitez exécuter le projet à partir des sources :
 <p align="center">
   <img src="LOGO-DEEP-CONCEPT%20fc.png" alt="Logo DEEP Concept" width="200"/>
   <br>
-  <i>Cette application a été développée au cours d'un stage au sein de l'entreprise <b>DEEP Concept</b>.</i>
+  <i>Cette application a été développée au cours d'un stage au sein de l'entreprise <a href="https://deepconcept.fr/" target="_blank"><b>DEEP Concept</b></a>.</i>
 </p>
