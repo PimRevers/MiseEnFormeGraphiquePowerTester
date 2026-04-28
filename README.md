@@ -57,6 +57,64 @@ Si vous souhaitez exécuter le projet à partir des sources :
 * `resources_rc.py` : Ressources compilées (logo de l'entreprise).
 
 ---
+
+## Modifications éventuelles
+
+### Mise à jour du logo de l'application
+
+Si l'entreprise change de logo, voici la procédure à suivre pour mettre à jour l'application :
+
+1. Remplacer l'image source
+   * Remplacez le fichier de l'image à la racine du projet par le nouveau logo (conservez de préférence le format **PNG** avec fond transparent).
+   * Si vous changez le nom du fichier, n'oubliez pas de mettre à jour le lien dans le fichier `resources.qrc`.
+
+2. Recompiler les ressources Qt
+   * L'application utilise un fichier de ressources compilé pour intégrer le logo directement dans le code. Pour appliquer le changement, lancez la commande suivante dans votre terminal :
+   ```bash
+   pyside6-rcc resources.qrc -o resources_rc.py
+   ```
+
+3. Mettre à jour l'icône de l'exécutable (.ico)
+   Pour que l'icône du fichier .exe change également dans l'explorateur Windows :
+      * Convertissez votre nouveau logo au format .ico (taille recommandée : 256x256 pixels) en utilisant le fichier `convert_ico.py` en remplaçant le nom du fichier d'origine par le nom du nouveau fichier (s'il a changé)
+      * Remplacez le fichier `logo.ico` existant par le nouveau.
+
+4. Re-générer l'exécutable
+   Enfin, supprimez les dossiers build/ et dist/ et relancez la compilation avec PyInstaller pour inclure les nouvelles ressources (depuis la racine du dossier contenant tous les fichiers de code) :
+   ```bash
+   python -m PyInstaller --noconsole --onedir --name "MiseEnFormeGraphiquePowerTester" --icon="logo.ico" --add-data "graphique.ui;." --add-data "accueil.ui;." --collect-submodules pandas main.py
+   ```
+
+
+### Modification des types de fichiers supportés
+
+Si vous souhaitez autoriser l'importation d'autres formats (comme .txt ou .dat), suivez ces étapes :
+
+1. Modifier le filtre de sélection
+Dans le fichier `fenetre_accueil.py`, dans la méthode ajouter_fichier, modifiez la chaîne de caractères du filtre dans getOpenFileNames :
+```
+# Pour ajouter les fichiers .txt par exemple :
+fichiers, _ = QtWidgets.QFileDialog.getOpenFileNames(
+    self, 
+    "Sélectionner des fichiers", 
+    "", 
+    "Fichiers de données (*.csv *.txt)" # Ajoutez l'extension ici
+)
+```
+
+2. Adapter la lecture des données
+Dans le fichier `fenetre_graphique.py`, la méthode _lire_donnees utilise actuellement un séparateur par tabulation (\t). Si vos nouveaux fichiers utilisent un séparateur différent (comme une virgule ou un point-virgule), vous devrez ajuster ce paramètre :
+```
+# Dans fenetre_graphique.py
+donnees_propre = pd.read_csv(chemin_fichier, sep='\t', header=None).dropna() 
+# Changez sep='\t' par sep=',' ou sep=';' selon vos besoins.
+```
+
+3. Re-générer l'exécutable
+Comme pour tout changement de code, n'oubliez pas de supprimer les dossiers build/ et dist/ et de relancer la commande de compilation PyInstaller pour que les modifications soient prises en compte.
+
+
+---
 <p align="center">
   <img src="LOGO-DEEP-CONCEPT%20fc.png" alt="Logo DEEP Concept" width="200"/>
   <br>
