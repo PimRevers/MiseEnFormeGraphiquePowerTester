@@ -29,7 +29,10 @@ Si vous souhaitez exécuter le projet à partir des sources :
     ```bash
     pip install PySide6 pandas matplotlib
     ```
-2.  Lancez l'application :
+2.  Allez dans l'onglet **Releases** de ce dépôt.
+3.  Téléchargez le fichier `Source code (zip)`.
+4.  Extrayez l'archive qui contient tous les fichiers de code de l'application.
+4.  Lancez l'application (dans un terinal) :
     ```bash
     python main.py
     ```
