@@ -1,0 +1,5 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource prefix="/images">
+    <file alias="logo_entreprise.png">LOGO-DEEP-CONCEPT fc.png</file>
+</qresource>
+</RCC>

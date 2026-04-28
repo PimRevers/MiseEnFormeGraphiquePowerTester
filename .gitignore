@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
+# PyInstaller (Tes dossiers de compilation)
+build/
+dist/
+*.spec
+
+# IDEs
+.vscode/
+.idea/
