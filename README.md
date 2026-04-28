@@ -22,8 +22,6 @@
 2.  Téléchargez le fichier `MiseEnFormeGraphiquePowerTester.zip`.
 3.  Extrayez l'archive et lancez l'exécutable `MiseEnFormeGraphiquePowerTester.exe`.
 
-> [!IMPORTANT]
-> **Note sur l'antivirus** : L'application n'étant pas signée numériquement, votre antivirus (comme McAfee) peut bloquer son lancement. Si cela arrive, restaurez le fichier depuis la quarantaine et ajoutez-le aux exclusions.
 
 ### Pour les développeurs
 Si vous souhaitez exécuter le projet à partir des sources :
